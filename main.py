@@ -1,5 +1,9 @@
 # Input sequence
-test_sequence = "ACAACATACAAAGGGCCACAGATACATCAAAAAATGCTCAACATCACTATTTGTCAGGGAAGTACTAATTAAAACCAAAATGAGATGTCCCCTCAAACCTGTTAGAATGGCTATTATCAAAAAGATGAAAGATAGCAACTATCAGAGAGGATGATAGAAAAGGGAACCCTTGCATCATGTACAAATTAAAAATAGAACTATCACATGATCCAAGAATCCTACTTCTGGGTATATAGCCAAAGGAATTGAAATCAATATGTCAAAGGGATATCTGCACTCCTATGTTATTGCAGCATGTTCACAATGGCCAAGATATAGAATCAACCTAACTGTTCATAGACAGATGAATGGATAAATGAAATGTGATATGGAAAATTATTCAGCCTTAAAAACAGTAGGAAATTCTGTCATTTGAGACAACGTGGATGAACCTAGAGGACATTAAGCTAAGTGAAATAAGCTAGACACAGAAAGACAAATATTGCATGATCTCACTTAGAATCTAAAAAATCTGAACTCATAGAAGCAGAGAATAGTATGATGGTTACTAGGGTTATCTGGCAGGGAGAGGATGAGGAAATGGGACATTGTTAATAAAAGGAAAAAAATTCAATTAGTAGG"
+# test_sequence = "ACAACATACAAAGGGCCACAGATACATCAAAAAATGCTCAACATCACTATTTGTCAGGGAAGTACTAATTAAAACCAAAATGAGATGTCCCCTCAAACCTGTTAGAATGGCTATTATCAAAAAGATGAAAGATAGCAACTATCAGAGAGGATGATAGAAAAGGGAACCCTTGCATCATGTACAAATTAAAAATAGAACTATCACATGATCCAAGAATCCTACTTCTGGGTATATAGCCAAAGGAATTGAAATCAATATGTCAAAGGGATATCTGCACTCCTATGTTATTGCAGCATGTTCACAATGGCCAAGATATAGAATCAACCTAACTGTTCATAGACAGATGAATGGATAAATGAAATGTGATATGGAAAATTATTCAGCCTTAAAAACAGTAGGAAATTCTGTCATTTGAGACAACGTGGATGAACCTAGAGGACATTAAGCTAAGTGAAATAAGCTAGACACAGAAAGACAAATATTGCATGATCTCACTTAGAATCTAAAAAATCTGAACTCATAGAAGCAGAGAATAGTATGATGGTTACTAGGGTTATCTGGCAGGGAGAGGATGAGGAAATGGGACATTGTTAATAAAAGGAAAAAAATTCAATTAGTAGG"
+# The test_sequence was used to test if all of the functions worked correctly
+homo_sapiens = open('hsapiens.txt').readlines()[0]
+plasmodium_falciparum = open('pfalciparum.txt').readlines()[0]
+common_mosquito = open('agambiaeas.txt').readlines()[0]
 # Determining the length of the sequence
 def length(string):
 	length = 0;
@@ -25,8 +29,21 @@ def guanine_count(string):
     guanine_count = string.count('G')
     return guanine_count
 # Printing the results
-print("Length: " + str(length(test_sequence)))
-print("Thymine Count: " + str(thymine_count(test_sequence)))
-print("Adenine Count: " + str(adenine_count(test_sequence)))
-print("Cytosine Count: " + str(cytosine_count(test_sequence)))
-print("Guanine Count: " + str(guanine_count(test_sequence)))
+print("Length: " + str(length(homo_sapiens)))
+print("Thymine Count: " + str(thymine_count(homo_sapiens)))
+print("Adenine Count: " + str(adenine_count(homo_sapiens)))
+print("Cytosine Count: " + str(cytosine_count(homo_sapiens)))
+print("Guanine Count: " + str(guanine_count(homo_sapiens)))
+print("###")
+print("Length: " + str(length(homo_sapiens)))
+print("Thymine Count: " + str(thymine_count(plasmodium_falciparum)))
+print("Adenine Count: " + str(adenine_count(plasmodium_falciparum)))
+print("Cytosine Count: " + str(cytosine_count(plasmodium_falciparum)))
+print("Guanine Count: " + str(guanine_count(plasmodium_falciparum)))
+print("###")
+print("Length: " + str(length(homo_sapiens)))
+print("Thymine Count: " + str(thymine_count(common_mosquito)))
+print("Adenine Count: " + str(adenine_count(common_mosquito)))
+print("Cytosine Count: " + str(cytosine_count(common_mosquito)))
+print("Guanine Count: " + str(guanine_count(common_mosquito)))
+print("###")
