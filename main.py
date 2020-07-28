@@ -1,13 +1,17 @@
 # Input sequence
 test_sequence = "ACAACATACAAAGGGCCACAGATACATCAAAAAATGCTCAACATCACTATTTGTCAGGGAAGTACTAATTAAAACCAAAATGAGATGTCCCCTCAAACCTGTTAGAATGGCTATTATCAAAAAGATGAAAGATAGCAACTATCAGAGAGGATGATAGAAAAGGGAACCCTTGCATCATGTACAAATTAAAAATAGAACTATCACATGATCCAAGAATCCTACTTCTGGGTATATAGCCAAAGGAATTGAAATCAATATGTCAAAGGGATATCTGCACTCCTATGTTATTGCAGCATGTTCACAATGGCCAAGATATAGAATCAACCTAACTGTTCATAGACAGATGAATGGATAAATGAAATGTGATATGGAAAATTATTCAGCCTTAAAAACAGTAGGAAATTCTGTCATTTGAGACAACGTGGATGAACCTAGAGGACATTAAGCTAAGTGAAATAAGCTAGACACAGAAAGACAAATATTGCATGATCTCACTTAGAATCTAAAAAATCTGAACTCATAGAAGCAGAGAATAGTATGATGGTTACTAGGGTTATCTGGCAGGGAGAGGATGAGGAAATGGGACATTGTTAATAAAAGGAAAAAAATTCAATTAGTAGG"
-
+# Determining the length of the sequence
 def length(string):
 	length = 0;
 	for i in string:
 		# Make a function here that counts the number of nucleotides in the input 
 		# sequence, return as variable "length".
 		length = len(string)
-	return length;
-
-# Print your result.
-print(length(test_sequence));
+	return length
+# Counting the amount of Thymine in the sequence
+def thymine_count(string):
+    thymine_count = string.count('T')
+    return thymine_count
+# Printing the results
+print("Length: " + str(length(test_sequence)))
+print("Thymine Count: " + str(thymine_count(test_sequence)))
